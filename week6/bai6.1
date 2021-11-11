@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int str[100];
+int j,k;
+int timkiem(int str[],int j){
+	int k=0;
+	str[10]=j;
+	while(str[k]!=j){
+		k++;
+	}
+	return k;
+}
+
+int main(){
+	printf("nhap day so:");
+	for(int i=0;i<10;i++){
+		scanf("%d",&str[i]);
+	}
+	printf("nhap so can tim:");
+	scanf("%d",&j);
+	int u=timkiem(str,j);
+	if(u<10)
+	printf("so %d o vi tri thu %d",j,u+1);
+	else
+	printf("eo co");
+	return 0;	
+}
